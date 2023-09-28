@@ -3,8 +3,11 @@
 
 for i in {1..10}
 do
-    echo "Best School"
+    
     if [ "$i" -eq "9" ]; then
+    echo "Best School"
     echo "Hi"
+    else
+    echo "Best School"
     fi
 done
