@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #using for loop to print
 
-NUM="0"
+NUM="1"
 
 while [ "$NUM" -lt "11" ]
 do
