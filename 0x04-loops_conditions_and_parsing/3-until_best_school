@@ -2,7 +2,7 @@
 #until loop to print
 
 NUM="0"
-until [ "$NUM" -eq 9 ]
+until [ "$NUM" -eq 10 ]
 do
     NUM=$(( NUM + 1 ))
     echo "Best School"
