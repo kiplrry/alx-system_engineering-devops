@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 #using for loop to print
 
-for i in {1..10}
+NUM="11"
+
+while [ "$NUM" -gt "0"]
 do
     
     if [ "$i" -eq "9" ]; then
@@ -10,4 +12,5 @@ do
     else
     echo "Best School"
     fi
+    NUM="$((NUM - 1))"
 done
