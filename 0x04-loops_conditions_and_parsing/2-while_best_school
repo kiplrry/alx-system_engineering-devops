@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#using while loop
 
 NUM="10"
 while [ "$NUM" -gt "0" ]

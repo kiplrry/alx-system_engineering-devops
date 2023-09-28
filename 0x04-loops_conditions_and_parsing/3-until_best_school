@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#until loop to print
 
 NUM="0"
 until [ "$NUM" -eq 9 ]

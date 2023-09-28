@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#using wile loop and case
 
 START="1"
 STOP="21"

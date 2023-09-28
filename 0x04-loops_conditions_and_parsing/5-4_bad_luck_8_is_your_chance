@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#using while loop and if statements
 
 NUM="10"
 while [ "$NUM" -gt "1" ]; do
