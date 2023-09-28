@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 #using for loop to print
 
-NUM="11"
+NUM="0"
 
-while [ "$NUM" -gt "0"]
+while [ "$NUM" -lt "11" ]
 do
     
-    if [ "$i" -eq "9" ]; then
+    if [ "$NUM" -eq "9" ]; then
     echo "Best School"
     echo "Hi"
     else
     echo "Best School"
     fi
-    NUM="$((NUM - 1))"
+    NUM="$((NUM + "1"))"
 done
