@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+START="1"
+STOP="21"
+while [ "$START" -lt "$STOP" ]; do
+echo "$START"
+case $START in
+    "4")
+        echo "bad luck from China"
+        ;;
+    "9")
+        echo "bad luck from Japan"
+        ;;
+    "17")
+        echo "bad luck from Italy"
+        ;;
+esac
+START=$(( START + 1))
+done

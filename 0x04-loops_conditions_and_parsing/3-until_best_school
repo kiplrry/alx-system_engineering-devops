@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+NUM="0"
+until [ "$NUM" -eq 9 ]
+do
+    NUM=$(( NUM + 1 ))
+    echo "Best School"
+done
