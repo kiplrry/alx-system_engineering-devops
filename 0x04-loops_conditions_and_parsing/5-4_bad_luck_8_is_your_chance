@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #using while loop and if statements
 
-NUM="10"
-while [ "$NUM" -gt "1" ]; do
+NUM="1"
+while [ "$NUM" -lt "11" ]; do
     if [ "$NUM" -eq "4" ]; then
         echo "bad luck"
     elif [ "$NUM" -eq "8" ]; then
@@ -10,5 +10,5 @@ while [ "$NUM" -gt "1" ]; do
     else
         echo "Best School"
     fi
-    NUM=$(( NUM - 1))
+    NUM=$(( NUM + 1))
 done
