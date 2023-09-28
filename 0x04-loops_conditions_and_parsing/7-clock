@@ -11,3 +11,4 @@ while [ "$HOUR" -lt "12" ]; do
     done
     HOUR=$(( HOUR + 1))
 done
+echo "HOUR: 12"
