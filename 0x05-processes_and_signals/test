@@ -1,8 +1,0 @@
-#!/bin/env bash
-
-trap "echo 'why yu no love me'"  SIGINT SIGTERM
-echo $$
-while true; do
-echo "To infinity"
-sleep 2
-done
