@@ -1,3 +1,4 @@
+# This manifest creates a file at /tmp
 file { 'school':
   path    => '/tmp/school',
   mode    => '0744',
