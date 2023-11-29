@@ -1,5 +1,4 @@
 #my code
-Host fendo
-	Hostname fendo
-	Port 22
-	User larry
+Host *
+  IdentityFile ~/.ssh/school
+  PasswordAuthentication no
