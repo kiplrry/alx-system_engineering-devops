@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# script that configures a new Ubuntu machine to respect above requirements
+
+apt-get update
+apt-get -y install nginx
+ufw allow 'Nginx HTTP'
+echo "Hello World!" > /var/www/html/index.html
+string_for_replacement="server_name_;\n\trewrite ^\/redirect_me https:\/\/kiplarry.tech permanent"
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+
+service nginx start
