@@ -1,9 +1,17 @@
-#!/usr/bin/bash
-# Configures a brand new Ubuntu machine
+#!/usr/bin/env bash
+# Script that configures a new Ubuntu machine to respect above requirements
 
 sudo apt-get update
 sudo apt-get install -y nginx
-ufw allow 'Nginx HTTP'
-sudo sed -i "/^\t\ttry_files/i\ \t\tadd_header X-Served-By $(hostname);" /etc/nginx/site-available/default
 
-sudo service nginx reload
+echo "Hello World!" | sudo tee /var/www/html/index.html
+string_for_replacement="server_name _;\n\trewrite ^\/redirect_me https:\/\/www.kiplarry.tech permanent;"
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom404.html
+custom404="\terror_page 404 \/custom404.html;\n\tlocation = \/custom404.html {\n\t\tinternal;\n\t}"
+sudo sed -i "/listen 80 default_server;/a\ $custom404" /etc/nginx/sites-enabled/default
+
+sudo sed -i "/^\t\ttry_files/i\ \t\tadd_header X-Served-By $(hostname);" /etc/nginx/sites-enabled/default
+
+sudo service nginx restart

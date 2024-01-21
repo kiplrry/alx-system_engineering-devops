@@ -12,6 +12,6 @@ echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom404.html
 custom404="\terror_page 404 \/custom404.html;\n\tlocation = \/custom404.html {\n\t\tinternal;\n\t}"
 sudo sed -i "/listen 80 default_server;/a\ $custom404" /etc/nginx/sites-enabled/default
 
-sudo sed -i "/^\t\ttry_files/i\ \t\tadd_header X-Served-By $(hostname);" /etc/nginx/sites-available/default
+sudo sed -i "/^\t\ttry_files/i\ \t\tadd_header X-Served-By $(hostname);" /etc/nginx/sites-enabled/default
 
 sudo service nginx restart
