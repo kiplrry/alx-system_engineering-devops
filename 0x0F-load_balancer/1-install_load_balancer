@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# configuring a new server to install haproxy and load balance between 2 servers
+
+sudo apt-get -y update
+
+sudo apt-get install -y --no-install-recommends software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.9
+
+sudo apt-get install -y haproxy=2.9.\*
+
+echo -e "\nfrontend front_http\n\tbind *:80\n\n\tdefault_backend back_http" >> /etc/haproxy/haproxy.cfg
+echo -e "\nbackend back_http\n\tbalance roundrobin\n\tserver web-01 54.234.126.199:80 check\n\tserver web-02 54.237.90.167:80 check" >> /etc/haproxy/haproxy.cfg
+
+sudo systemctl restart haproxy.service
