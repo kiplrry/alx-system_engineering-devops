@@ -10,4 +10,4 @@ echo -e "\nbackend back_http\n\tbalance roundrobin\n\tserver 120457-web-01 54.23
 
 echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
-sudo systemctl restart haproxy.service
+sudo service haproxy restart
