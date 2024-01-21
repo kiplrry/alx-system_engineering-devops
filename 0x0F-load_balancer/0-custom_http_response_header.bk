@@ -1,9 +1,0 @@
-#!/usr/bin/bash
-# Configures a brand new Ubuntu machine
-
-sudo apt-get update
-sudo apt-get install -y nginx
-ufw allow 'Nginx HTTP'
-sudo sed -i "/^\t\ttry_files/i\ \t\tadd_header X-Served-By $(hostname);" /etc/nginx/sites-available/default
-
-sudo service nginx reload
