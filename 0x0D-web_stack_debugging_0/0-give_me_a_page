@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# a script that troubleshoots the server
+
+apt-get update
+apt-get install -y apache2
+
+service apache2 start
