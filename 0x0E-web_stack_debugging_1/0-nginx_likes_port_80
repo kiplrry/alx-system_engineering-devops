@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# configuring a new server too listen to port 80
+
+apt-get update
+apt-get install -y nginx
+
+service nginx start
+
