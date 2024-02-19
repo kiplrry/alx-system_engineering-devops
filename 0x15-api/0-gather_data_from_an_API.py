@@ -7,9 +7,12 @@ from sys import argv
 
 if __name__ == "__main__":
     num = argv[1]
-    r = requests.get(f'https://jsonplaceholder.typicode.com/todos?userId={num}')
-    name = requests.get(f"""https://jsonplaceholder.typicode.com/users/{num}""")\
-        .json()['name']
+    r = requests.get(
+        f'https://jsonplaceholder.typicode.com//users/{num}/todos'
+        )
+    name = requests.get(
+        f"https://jsonplaceholder.typicode.com/users/{num}"
+                        ).json()['name']
 
     rjson = r.json()
     alltodos = len(rjson)
