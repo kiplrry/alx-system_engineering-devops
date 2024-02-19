@@ -21,7 +21,7 @@ if __name__ == "__main__":
     for todo in rjson:
         if todo["completed"] is True:
             donetodos += 1
-        todos += f"\n\t {todo['title']}"
+            todos += f"\n\t {todo['title']}"
 
     statement = f"Employee {name} is done with tasks({donetodos}/{alltodos}):\
     {todos}"
