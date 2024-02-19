@@ -18,6 +18,6 @@ if __name__ == "__main__":
 
     with open(f"{num}.csv", "w", encoding="utf-8") as fp:
         for todo in rjson:
-            string = (f"\"{todo['id']}\",\"{name}\","
+            string = (f"\"{todo['userId']}\",\"{name}\","
                       f"\"{todo['completed']}\",\"{todo['title']}\"\n")
             fp.write(string)
