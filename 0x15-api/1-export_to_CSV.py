@@ -10,14 +10,14 @@ if __name__ == "__main__":
     r = requests.get(
         f'https://jsonplaceholder.typicode.com//users/{num}/todos'
         )
-    name = requests.get(
+    userjson = requests.get(
         f"https://jsonplaceholder.typicode.com/users/{num}"
-                        ).json()['name']
+                        ).json()
 
     rjson = r.json()
 
     with open(f"{num}.csv", "w", encoding="utf-8") as fp:
         for todo in rjson:
-            string = (f"\"{todo['userId']}\",\"{name}\","
+            string = (f"\"{todo['userId']}\",\"{userjson['username']}\","
                       f"\"{todo['completed']}\",\"{todo['title']}\"\n")
             fp.write(string)
