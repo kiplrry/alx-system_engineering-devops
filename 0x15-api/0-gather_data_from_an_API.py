@@ -19,5 +19,5 @@ for todo in rjson:
     todos += f"\n\t {todo['title']}"
 
 statement = f"Employee {name} is done with tasks({donetodos}/{alltodos}):\
-    {todos}"
+{todos}"
 print(statement)
