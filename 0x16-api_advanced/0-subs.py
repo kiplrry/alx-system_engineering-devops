@@ -10,7 +10,7 @@ def number_of_subscribers(subreddit):
     for a given subreddit.
     """
 
-    headers = {'User-Agent': 'Google Chrome Version 110.0.5481.105'}
+    headers = {'User-Agent': 'Google Chrome'}
     url = f'https://www.reddit.com/r/{subreddit}/about.json'
     res = requests.get(url, headers=headers, timeout=1000)
     if res.status_code == 200:
